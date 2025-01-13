@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_animations/flutter_map_animations.dart';
@@ -30,6 +32,7 @@ class MapScreen extends StatelessWidget {
               children: [
                 MapView(),
                 _Counter(),
+                _chouseMap(),
               ],
             ),
           ),
@@ -40,6 +43,113 @@ class MapScreen extends StatelessWidget {
     //   backgroundColor: Color(0xFF162130),
     //   body:
   }
+}
+
+Widget _chouseMap() {
+  final controller = Get.find<MyMapController>();
+  return SafeArea(
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Obx(
+        () => ClipRRect(
+          borderRadius: controller.isMapSelectedOpen.value
+              ? BorderRadius.circular(12)
+              : BorderRadius.circular(100),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+            child: AnimatedContainer(
+              duration: Duration(milliseconds: 500),
+              curve: Curves.easeInOutCubic,
+              height: controller.isMapSelectedOpen.value ? null : 50,
+              width:
+                  controller.isMapSelectedOpen.value ? screenHeight - 50 : 50,
+              decoration: BoxDecoration(
+                borderRadius: controller.isMapSelectedOpen.value
+                    ? BorderRadius.circular(12)
+                    : BorderRadius.circular(100),
+                color: controller.isMapSelectedOpen.value
+                    ? pinkColor.withOpacity(.5)
+                    : lightOfDarkColor.withOpacity(0.5),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: controller.isMapSelectedOpen.value
+                    ? Obx(
+                        () => Wrap(
+                          spacing: 8.0,
+                          runSpacing: 8.0,
+                          children: controller.mapLinks.map((link) {
+                            return InkWell(
+                              onTap: () {
+                                controller.theMapUrl = link.obs;
+                                controller.isMapSelectedOpen.value = false;
+                              },
+                              child: Container(
+                                height: (screenWidth / 3) - 18,
+                                width: (screenWidth / 3) - 18,
+                                padding: EdgeInsets.all(8.0),
+                                decoration: BoxDecoration(
+                                  color: darkColor,
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  border: Border.all(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                child: FlutterMap(
+                                  mapController:
+                                      controller.mapController.mapController,
+                                  options: MapOptions(
+                                    backgroundColor: darkColor,
+                                    initialCenter:
+                                        controller.currentPosition.value!,
+                                    initialZoom: 17.0,
+                                    onMapEvent: (event) {
+                                      if (event.source == MapEventSource.onDrag) {
+                                        controller.currentZoom.value =
+                                            event.camera.zoom;
+                                        controller.isFollowingUser.value = false;
+                                      }
+                                    },
+                                  ),
+                                  children: [
+                                    TileLayer(
+                                      urlTemplate: link,
+                                      subdomains: [
+                                        'a',
+                                        'b',
+                                        'c',
+                                        'd'
+                                      ], // قائمة نطاقات الخادم
+                                    ),
+                                    // PolylineLayer(
+                                    //   polylines: [
+                                    //     Polyline(
+                                    //       points: controller.roadPoints,
+                                    //       strokeWidth: 5,
+                                    //       color: pinkColor,
+                                    //     ),
+                                    //   ],
+                                    // ),
+                                    // // LocationMarkerLayer(),
+                                  ],
+                                ),
+                              ),
+                            );
+                          }).toList(),
+                        ),
+                      )
+                    : InkWell(
+                        onTap: () {
+                          controller.isMapSelectedOpen.value = true;
+                        },
+                        child: Icon(Icons.menu, color: Colors.white)),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 class MapView extends StatefulWidget {
@@ -60,6 +170,7 @@ class _MapViewState extends State<MapView> {
           return FlutterMap(
             mapController: controller.mapController.mapController,
             options: MapOptions(
+              backgroundColor: darkColor,
               initialCenter: controller.currentPosition.value!,
               initialZoom: 17.0,
               onMapEvent: (event) {
@@ -71,9 +182,8 @@ class _MapViewState extends State<MapView> {
             ),
             children: [
               TileLayer(
-                urlTemplate:
-                    'https://api.maptiler.com/maps/streets-v2-dark/256/{z}/{x}/{y}.png?key=2rkWwkxCUSuGsDQqmfkj',
-                additionalOptions: {'key': '2rkWwkxCUSuGsDQqmfkj'},
+                urlTemplate: controller.theMapUrl.value,
+                subdomains: ['a', 'b', 'c', 'd'], // قائمة نطاقات الخادم
               ),
               PolylineLayer(
                 polylines: [
@@ -146,10 +256,10 @@ class _LocationMarkerLayerState extends State<LocationMarkerLayer>
       builder: (context, snapshot) {
         if (!snapshot.hasData) return Container();
 
-        controller.roadPoints.add(LatLng(
-          snapshot.data!.latitude!,
-          snapshot.data!.longitude!,
-        ));
+        // controller.roadPoints.add(LatLng(
+        //   snapshot.data!.latitude!,
+        //   snapshot.data!.longitude!,
+        // ));
 
         // تحديث المواقع
         if (isGetFirstLocation) {
@@ -264,7 +374,7 @@ class _Counter extends GetView<MyMapController> {
                               children: [
                                 Text(controller.avg.value.toStringAsFixed(1),
                                     style: textStyle),
-                                Text('AVG SPEED', style: textStyle2),
+                                Text('AVG', style: textStyle2),
                               ],
                             ),
                           ],

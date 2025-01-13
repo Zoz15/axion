@@ -9,6 +9,20 @@ import 'package:geolocator/geolocator.dart';
 class MyMapController extends GetxController with GetTickerProviderStateMixin {
   late final AnimatedMapController mapController;
 
+  var mapLinks = <String> [
+    'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+    // 'http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',
+    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    'http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
+    'http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png',
+    'http://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+    'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+    // 'http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
+  ].obs;
+
+  RxString theMapUrl = 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'.obs;  
+  RxBool isMapSelectedOpen = false.obs;
+
   var roadPoints = <LatLng>[].obs;
   var currentPosition = Rx<LatLng?>(null);
   var speeds = <double>[].obs;
@@ -43,53 +57,8 @@ class MyMapController extends GetxController with GetTickerProviderStateMixin {
   }
 
   Future<void> getLocation() async {
-    bool permission = await checkPermission();
-    try {
-      if (permission) {
-        Position position = await Geolocator.getCurrentPosition();
-        currentPosition.value = LatLng(position.latitude, position.longitude);
-      } else {
-        Get.snackbar('Error', 'Location permission denied');
-      }
-    } catch (e) {
-      print('Error is $e');
-    }
-  }
-
-  Future<bool> checkPermission() async {
-    // التحقق من تفعيل خدمات الموقع
-    bool serviceEnabled = await location.serviceEnabled();
-    if (!serviceEnabled) {
-      serviceEnabled = await location.requestService();
-      if (!serviceEnabled) {
-        Get.snackbar(
-            'Error', 'Location services are disabled. Please enable them.');
-        return false;
-      }
-    }
-
-    // التحقق من الأذونات
-    loc.PermissionStatus permissionGranted = await location.hasPermission();
-    if (permissionGranted == loc.PermissionStatus.denied) {
-      permissionGranted = await location.requestPermission();
-      if (permissionGranted != loc.PermissionStatus.granted) {
-        Get.snackbar('Error', 'Location permission denied. Please allow it.');
-        return false;
-      }
-    }
-
-    // معالجة حالة deniedForever
-    if (permissionGranted == loc.PermissionStatus.deniedForever) {
-      Get.snackbar(
-        'Error',
-        'Location permission is permanently denied. Please enable it from app settings.',
-      );
-      return false;
-    }
-
-    // إذا تم التفعيل ووجود الإذن
-
-    return true;
+    Position position = await Geolocator.getCurrentPosition();
+    currentPosition.value = LatLng(position.latitude, position.longitude);
   }
 
   void addPositionToHistory(LatLng position) {
@@ -234,6 +203,7 @@ class MyMapController extends GetxController with GetTickerProviderStateMixin {
   @override
   void onClose() {
     mapController.dispose();
+    currentPosition.value = null;
     // resetRoute();
 
     super.onClose();

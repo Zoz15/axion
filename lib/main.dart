@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_background_service/flutter_background_service.dart';
 import 'package:get/get.dart';
 import 'package:ride/Screens/home_Screen.dart';
 // import 'package:location/location.dart' as loc;
@@ -7,10 +6,10 @@ import 'package:ride/Screens/home_Screen.dart';
 import 'package:ride/manger/home_controller.dart';
 import 'package:ride/var.dart';
 
-Future<void> main() async {
+void main() {
   Get.put(HomeController(), permanent: true);
-    WidgetsFlutterBinding.ensureInitialized();
-  FlutterBackgroundService();
+  //   WidgetsFlutterBinding.ensureInitialized();
+  // FlutterBackgroundService();
   runApp(MyApp());
 }
 
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
       //     page: () => HomeScreen(),
       //   ),
       // ],
-      home:  HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

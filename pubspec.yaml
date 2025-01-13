@@ -49,8 +49,9 @@ dependencies:
   flutter_map_animations: ^0.8.0
   flutter_launcher_icons: "^0.14.2"
   fl_chart: ^0.70.1
-  flutter_background_service: ^4.0.0
-  
+  flutter_background_service: ^5.1.0
+
+
 flutter_launcher_icons:
   android: "ic_launcher"
   ios: true

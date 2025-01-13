@@ -1,8 +1,10 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:ride/Screens/map_Screen.dart';
 import 'package:ride/Screens/map_Screen_Permission.dart';
 import 'package:ride/var.dart';
@@ -261,8 +263,8 @@ class _AvgDistanceBox extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Expanded(
-                      child: homeController.allAvg.length > 2 &&
-                              homeController.allDistanse.length > 2
+                      child: homeController.allAvg.length >= 2 &&
+                              homeController.allDistanse.length >= 2
                           ? myLineChart()
                           : Center(
                               child: Text(
@@ -448,19 +450,91 @@ class _RouteCard extends StatelessWidget {
 
   Widget _buildRouteContent() {
     return Container(
+      // width: screenWidth - 40,
+      height: 200,
       margin: EdgeInsets.only(bottom: 15),
       decoration: BoxDecoration(
-        color: darkColor,
+        color: Colors.black,
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      child: Stack(
+        children: [
+          _buildRouteImage(),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildRouteHeader(),
+                // SizedBox(height: 100),
+                _buildRouteStats(),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildRouteImage() {
+    HomeController homeController = Get.find();
+
+    List<LatLng> routePoints = (route['route'] as List<dynamic>).map((point) {
+      return LatLng(point['lat'], point['lng']);
+    }).toList();
+
+    LatLngBounds bounds = homeController.calculateBounds(routePoints);
+
+    final MapController mapController = MapController();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      mapController.fitCamera(
+        CameraFit.bounds(bounds: bounds, padding: EdgeInsets.all(40)),
+      );
+    });
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: SizedBox(
+        height: 200,
+        width: screenWidth - 40,
+        child: FlutterMap(
+          mapController: mapController,
+          options: MapOptions(
+            backgroundColor: darkColor,
+            initialCenter: LatLng(31.211911, 29.919349),
+            // minZoom: 10.0,
+            initialZoom: 13.0,
+            interactionOptions: InteractionOptions(
+              flags: InteractiveFlag.pinchZoom |
+                  InteractiveFlag.doubleTapZoom, // السماح بالتكبير/التصغير فقط
+            ),
+          ),
           children: [
-            _buildRouteHeader(),
-            SizedBox(height: 15),
-            _buildRouteStats(),
+             TileLayer(
+            urlTemplate:
+                'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+            subdomains: ['a', 'b', 'c', 'd'], // قائمة نطاقات الخادم
+            // attributionBuilder: (_) => Text(
+            //   '© OpenStreetMap contributors, © CARTO',
+            //   style: TextStyle(color: Colors.white, fontSize: 12),
+            // ),
+          ),
+            // TileLayer(
+            //   urlTemplate:
+            //       'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png',
+            //   userAgentPackageName: 'com.example.app', // مطلوب لتجنب الحظر
+            // ),
+            PolylineLayer(
+              polylines: [
+                Polyline(
+                  points: routePoints,
+                  strokeWidth: 5,
+                  color: pinkColor,
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -485,15 +559,15 @@ class _RouteCard extends StatelessWidget {
             Text(
               route['elapsedTime'],
               style: GoogleFonts.poppins(
-                fontSize: 14,
-                color: Colors.grey[400],
+                fontSize: 18,
+                color: lightColor,
               ),
             ),
             Text(
               _formatTimestamp(DateTime.parse(route['timestamp'])),
               style: GoogleFonts.poppins(
                 fontSize: 12,
-                color: Colors.grey[600],
+                color: lightBlue,
               ),
             ),
           ],

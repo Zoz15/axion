@@ -66,7 +66,7 @@ class MapScreenPermission extends StatelessWidget {
                     child: Center(
                         child: Text(
                       'Enable Location',
-                      style: GoogleFonts.orbitron(
+                      style: GoogleFonts.cairo(
                         color: Colors.white,
                         fontSize: 20,
                       ),

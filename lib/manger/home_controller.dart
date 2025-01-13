@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
 import 'package:get/get.dart';
+import 'package:latlong2/latlong.dart';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'dart:convert';
@@ -134,4 +136,24 @@ class HomeController extends GetxController {
   void updateRoutes(List<Map<String, dynamic>> newRoutes) {
     routes.assignAll(newRoutes);
   }
+
+
+  LatLngBounds calculateBounds(List<LatLng> points) {
+  double minLat = points[0].latitude;
+  double maxLat = points[0].latitude;
+  double minLng = points[0].longitude;
+  double maxLng = points[0].longitude;
+
+  for (var point in points) {
+    if (point.latitude < minLat) minLat = point.latitude;
+    if (point.latitude > maxLat) maxLat = point.latitude;
+    if (point.longitude < minLng) minLng = point.longitude;
+    if (point.longitude > maxLng) maxLng = point.longitude;
+  }
+
+  return LatLngBounds(
+    LatLng(minLat, minLng), // الزاوية الجنوبية الغربية
+    LatLng(maxLat, maxLng), // الزاوية الشمالية الشرقية
+  );
+}
 }
