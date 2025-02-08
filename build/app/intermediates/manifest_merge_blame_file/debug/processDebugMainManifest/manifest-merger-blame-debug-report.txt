@@ -1,0 +1,670 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.axion"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="35" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:8:5-66
+15-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:8:22-64
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:2:5-79
+16-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:2:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:3:5-81
+17-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:3:22-78
+18    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+18-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:4:5-85
+18-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:4:22-82
+19    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+19-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:5:5-77
+19-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:5:22-74
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+20-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:6:5-77
+20-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:6:22-74
+21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" /> <!-- Required to query activities that can process text -->
+21-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:7:5-86
+21-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:7:22-83
+22    <queries>
+22-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:51:5-56:15
+23        <intent>
+23-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:52:9-55:18
+24            <action android:name="android.intent.action.PROCESS_TEXT" />
+24-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:53:13-73
+24-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:53:21-70
+25
+26            <data android:mimeType="text/plain" />
+26-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:54:13-51
+26-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:54:19-48
+27        </intent>
+28    </queries>
+29
+30    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+30-->[:disable_battery_optimization] D:\axon Program\code\Project\flutter\axion\build\disable_battery_optimization\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-95
+30-->[:disable_battery_optimization] D:\axon Program\code\Project\flutter\axion\build\disable_battery_optimization\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-92
+31    <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
+31-->[:disable_battery_optimization] D:\axon Program\code\Project\flutter\axion\build\disable_battery_optimization\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-75
+31-->[:disable_battery_optimization] D:\axon Program\code\Project\flutter\axion\build\disable_battery_optimization\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:22-72
+32    <uses-permission android:name="android.permission.WAKE_LOCK" />
+32-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-68
+32-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:22-65
+33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+33-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:5-79
+33-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:22-76
+34    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+34-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:5-81
+34-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:22-78
+35    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+35-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:26:5-82
+35-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:26:22-79
+36    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+36-->[com.google.android.recaptcha:recaptcha:18.5.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\d820bb37cb15f658f9d091f6a713e425\transformed\jetified-recaptcha-18.5.1\AndroidManifest.xml:9:5-98
+36-->[com.google.android.recaptcha:recaptcha:18.5.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\d820bb37cb15f658f9d091f6a713e425\transformed\jetified-recaptcha-18.5.1\AndroidManifest.xml:9:22-95
+37
+38    <permission
+38-->[androidx.core:core:1.13.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\ad2b3df54d3079cea81e79983573f45c\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+39        android:name="com.example.axion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+39-->[androidx.core:core:1.13.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\ad2b3df54d3079cea81e79983573f45c\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+40        android:protectionLevel="signature" />
+40-->[androidx.core:core:1.13.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\ad2b3df54d3079cea81e79983573f45c\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+41
+42    <uses-permission android:name="com.example.axion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+42-->[androidx.core:core:1.13.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\ad2b3df54d3079cea81e79983573f45c\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+42-->[androidx.core:core:1.13.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\ad2b3df54d3079cea81e79983573f45c\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+43
+44    <application
+45        android:name="android.app.Application"
+46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+46-->[androidx.core:core:1.13.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\ad2b3df54d3079cea81e79983573f45c\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+47        android:debuggable="true"
+48        android:extractNativeLibs="false"
+49        android:icon="@mipmap/ic_launcher"
+50        android:label="axion"
+51        android:usesCleartextTraffic="true" >
+52        <activity
+53            android:name="com.example.axion.MainActivity"
+54            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+55            android:exported="true"
+56            android:hardwareAccelerated="true"
+57            android:launchMode="singleTop"
+58            android:taskAffinity=""
+59            android:theme="@style/LaunchTheme"
+60            android:windowSoftInputMode="adjustResize" >
+61            <meta-data
+62                android:name="io.flutter.embedding.android.NormalTheme"
+63                android:resource="@style/NormalTheme" />
+64
+65            <intent-filter>
+66                <action android:name="android.intent.action.MAIN" />
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+69            </intent-filter>
+70        </activity>
+71
+72        <!-- Foreground service definition -->
+73        <service
+74            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
+75            android:exported="true"
+76            android:foregroundServiceType="location" />
+77
+78        <!--
+79             Don't delete the meta-data below.
+80             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+81        -->
+82        <meta-data
+83            android:name="flutterEmbedding"
+84            android:value="2" />
+85
+86        <service
+86-->[:cloud_firestore] D:\axon Program\code\Project\flutter\axion\build\cloud_firestore\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-12:19
+87            android:name="com.google.firebase.components.ComponentDiscoveryService"
+87-->[:cloud_firestore] D:\axon Program\code\Project\flutter\axion\build\cloud_firestore\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:18-89
+88            android:directBootAware="true"
+88-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+89            android:exported="false" >
+89-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:68:13-37
+90            <meta-data
+90-->[:cloud_firestore] D:\axon Program\code\Project\flutter\axion\build\cloud_firestore\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-11:85
+91                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+91-->[:cloud_firestore] D:\axon Program\code\Project\flutter\axion\build\cloud_firestore\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:17-134
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[:cloud_firestore] D:\axon Program\code\Project\flutter\axion\build\cloud_firestore\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:17-82
+93            <meta-data
+93-->[:firebase_auth] D:\axon Program\code\Project\flutter\axion\build\firebase_auth\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-11:85
+94                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+94-->[:firebase_auth] D:\axon Program\code\Project\flutter\axion\build\firebase_auth\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:17-124
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[:firebase_auth] D:\axon Program\code\Project\flutter\axion\build\firebase_auth\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:17-82
+96            <meta-data
+96-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:36:13-38:85
+97                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+97-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:37:17-128
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:38:17-82
+99            <meta-data
+99-->[:firebase_storage] D:\axon Program\code\Project\flutter\axion\build\firebase_storage\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-11:85
+100                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+100-->[:firebase_storage] D:\axon Program\code\Project\flutter\axion\build\firebase_storage\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:17-126
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[:firebase_storage] D:\axon Program\code\Project\flutter\axion\build\firebase_storage\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:17-82
+102            <meta-data
+102-->[:firebase_core] D:\axon Program\code\Project\flutter\axion\build\firebase_core\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-11:85
+103                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+103-->[:firebase_core] D:\axon Program\code\Project\flutter\axion\build\firebase_core\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:17-124
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[:firebase_core] D:\axon Program\code\Project\flutter\axion\build\firebase_core\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:69:13-71:85
+106                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+106-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:70:17-109
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:71:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\a44073747198d2d2e332a088d618cb6c\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:17:13-19:85
+109                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+109-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\a44073747198d2d2e332a088d618cb6c\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:18:17-122
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\a44073747198d2d2e332a088d618cb6c\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:19:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\a44073747198d2d2e332a088d618cb6c\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:20:13-22:85
+112                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+112-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\a44073747198d2d2e332a088d618cb6c\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:21:17-111
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\a44073747198d2d2e332a088d618cb6c\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:22:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:57:13-59:85
+115                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+115-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:58:17-122
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:59:17-82
+117            <meta-data
+117-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:60:13-62:85
+118                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+118-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:61:17-119
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:62:17-82
+120            <meta-data
+120-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bdd3ddf6e3b22eac3141181ba96169bf\transformed\jetified-firebase-storage-21.0.1\AndroidManifest.xml:30:13-32:85
+121                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+121-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bdd3ddf6e3b22eac3141181ba96169bf\transformed\jetified-firebase-storage-21.0.1\AndroidManifest.xml:31:17-118
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bdd3ddf6e3b22eac3141181ba96169bf\transformed\jetified-firebase-storage-21.0.1\AndroidManifest.xml:32:17-82
+123            <meta-data
+123-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bdd3ddf6e3b22eac3141181ba96169bf\transformed\jetified-firebase-storage-21.0.1\AndroidManifest.xml:33:13-35:85
+124                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+124-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bdd3ddf6e3b22eac3141181ba96169bf\transformed\jetified-firebase-storage-21.0.1\AndroidManifest.xml:34:17-107
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bdd3ddf6e3b22eac3141181ba96169bf\transformed\jetified-firebase-storage-21.0.1\AndroidManifest.xml:35:17-82
+126            <meta-data
+126-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\20d8a34b5bd3d2cdc7aa4cc2e8a3fa91\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+127                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+127-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\20d8a34b5bd3d2cdc7aa4cc2e8a3fa91\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+128                android:value="com.google.firebase.components.ComponentRegistrar" />
+128-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\20d8a34b5bd3d2cdc7aa4cc2e8a3fa91\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+129            <meta-data
+129-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\20d8a34b5bd3d2cdc7aa4cc2e8a3fa91\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+130                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+130-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\20d8a34b5bd3d2cdc7aa4cc2e8a3fa91\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+131                android:value="com.google.firebase.components.ComponentRegistrar" />
+131-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\20d8a34b5bd3d2cdc7aa4cc2e8a3fa91\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+132            <meta-data
+132-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\80c9f84b86d56e9023b81ac7d00097e9\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
+133                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+133-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\80c9f84b86d56e9023b81ac7d00097e9\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
+134                android:value="com.google.firebase.components.ComponentRegistrar" />
+134-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\80c9f84b86d56e9023b81ac7d00097e9\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
+135            <meta-data
+135-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\80c9f84b86d56e9023b81ac7d00097e9\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
+136                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+136-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\80c9f84b86d56e9023b81ac7d00097e9\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
+137                android:value="com.google.firebase.components.ComponentRegistrar" />
+137-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\80c9f84b86d56e9023b81ac7d00097e9\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
+138            <meta-data
+138-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\50b255bbd0512a6a2407eccec240888c\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+139                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+139-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\50b255bbd0512a6a2407eccec240888c\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+140                android:value="com.google.firebase.components.ComponentRegistrar" />
+140-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\50b255bbd0512a6a2407eccec240888c\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+141            <meta-data
+141-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+142                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+142-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+143                android:value="com.google.firebase.components.ComponentRegistrar" />
+143-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+144            <meta-data
+144-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\643db91eb81af55c7720d93a498b029d\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:25:13-27:85
+145                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+145-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\643db91eb81af55c7720d93a498b029d\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:26:17-115
+146                android:value="com.google.firebase.components.ComponentRegistrar" />
+146-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\643db91eb81af55c7720d93a498b029d\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:27:17-82
+147        </service>
+148        <service
+148-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:9-17:72
+149            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+149-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:13-107
+150            android:exported="false"
+150-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:16:13-37
+151            android:permission="android.permission.BIND_JOB_SERVICE" />
+151-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:17:13-69
+152        <service
+152-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:18:9-24:19
+153            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+153-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:13-97
+154            android:exported="false" >
+154-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:13-37
+155            <intent-filter>
+155-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:13-23:29
+156                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+156-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:22:17-78
+156-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:22:25-75
+157            </intent-filter>
+158        </service>
+159
+160        <receiver
+160-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:26:9-33:20
+161            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+161-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:13-98
+162            android:exported="true"
+162-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:28:13-36
+163            android:permission="com.google.android.c2dm.permission.SEND" >
+163-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:29:13-73
+164            <intent-filter>
+164-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:30:13-32:29
+165                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+165-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:31:17-81
+165-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:31:25-78
+166            </intent-filter>
+167        </receiver>
+168
+169        <provider
+169-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:41:9-45:38
+170            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+170-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:42:13-102
+171            android:authorities="com.example.axion.flutterfirebasemessaginginitprovider"
+171-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:43:13-88
+172            android:exported="false"
+172-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:44:13-37
+173            android:initOrder="99" />
+173-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:45:13-35
+174
+175        <receiver
+175-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:9-23:20
+176            android:name="com.pravera.flutter_foreground_task.service.RebootReceiver"
+176-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:13-86
+177            android:enabled="true"
+177-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:13-35
+178            android:exported="true" >
+178-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:16:13-36
+179            <intent-filter>
+179-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:17:13-22:29
+180                <action android:name="android.intent.action.BOOT_COMPLETED" />
+180-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:18:17-79
+180-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:18:25-76
+181                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+181-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:17-84
+181-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:25-81
+182                <!-- This is required on HTC devices to support their "quickboot" feature -->
+183                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+183-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:17-82
+183-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:25-79
+184            </intent-filter>
+185        </receiver>
+186        <receiver
+186-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:24:9-27:40
+187            android:name="com.pravera.flutter_foreground_task.service.RestartReceiver"
+187-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:25:13-87
+188            android:enabled="true"
+188-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:26:13-35
+189            android:exported="false" />
+189-->[:flutter_foreground_task] D:\axon Program\code\Project\flutter\axion\build\flutter_foreground_task\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:13-37
+190
+191        <service
+191-->[:geolocator_android] D:\axon Program\code\Project\flutter\axion\build\geolocator_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-12:56
+192            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+192-->[:geolocator_android] D:\axon Program\code\Project\flutter\axion\build\geolocator_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-77
+193            android:enabled="true"
+193-->[:geolocator_android] D:\axon Program\code\Project\flutter\axion\build\geolocator_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:13-35
+194            android:exported="false"
+194-->[:geolocator_android] D:\axon Program\code\Project\flutter\axion\build\geolocator_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:13-37
+195            android:foregroundServiceType="location" />
+195-->[:geolocator_android] D:\axon Program\code\Project\flutter\axion\build\geolocator_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:13-53
+196        <service
+196-->[:location] D:\axon Program\code\Project\flutter\axion\build\location\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:9-15:56
+197            android:name="com.lyokone.location.FlutterLocationService"
+197-->[:location] D:\axon Program\code\Project\flutter\axion\build\location\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:13-71
+198            android:enabled="true"
+198-->[:location] D:\axon Program\code\Project\flutter\axion\build\location\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:13-35
+199            android:exported="false"
+199-->[:location] D:\axon Program\code\Project\flutter\axion\build\location\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:13-37
+200            android:foregroundServiceType="location" />
+200-->[:location] D:\axon Program\code\Project\flutter\axion\build\location\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:13-53
+201
+202        <activity
+202-->[:url_launcher_android] D:\axon Program\code\Project\flutter\axion\build\url_launcher_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-11:74
+203            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+203-->[:url_launcher_android] D:\axon Program\code\Project\flutter\axion\build\url_launcher_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-74
+204            android:exported="false"
+204-->[:url_launcher_android] D:\axon Program\code\Project\flutter\axion\build\url_launcher_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:13-37
+205            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+205-->[:url_launcher_android] D:\axon Program\code\Project\flutter\axion\build\url_launcher_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:13-71
+206        <activity
+206-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:29:9-46:20
+207            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+207-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:30:13-80
+208            android:excludeFromRecents="true"
+208-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:31:13-46
+209            android:exported="true"
+209-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:32:13-36
+210            android:launchMode="singleTask"
+210-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:33:13-44
+211            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+211-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:34:13-72
+212            <intent-filter>
+212-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:35:13-45:29
+213                <action android:name="android.intent.action.VIEW" />
+213-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:36:17-69
+213-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:36:25-66
+214
+215                <category android:name="android.intent.category.DEFAULT" />
+215-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
+215-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
+216                <category android:name="android.intent.category.BROWSABLE" />
+216-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:17-78
+216-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:27-75
+217
+218                <data
+218-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:54:13-51
+219                    android:host="firebase.auth"
+220                    android:path="/"
+221                    android:scheme="genericidp" />
+222            </intent-filter>
+223        </activity>
+224        <activity
+224-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:47:9-64:20
+225            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+225-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:48:13-79
+226            android:excludeFromRecents="true"
+226-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:49:13-46
+227            android:exported="true"
+227-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:50:13-36
+228            android:launchMode="singleTask"
+228-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:51:13-44
+229            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+229-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:52:13-72
+230            <intent-filter>
+230-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:53:13-63:29
+231                <action android:name="android.intent.action.VIEW" />
+231-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:36:17-69
+231-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:36:25-66
+232
+233                <category android:name="android.intent.category.DEFAULT" />
+233-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
+233-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
+234                <category android:name="android.intent.category.BROWSABLE" />
+234-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:17-78
+234-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\bff5704f032bd391e441c737a0440e31\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:27-75
+235
+236                <data
+236-->D:\axon Program\code\Project\flutter\axion\android\app\src\main\AndroidManifest.xml:54:13-51
+237                    android:host="firebase.auth"
+238                    android:path="/"
+239                    android:scheme="recaptcha" />
+240            </intent-filter>
+241        </activity>
+242
+243        <uses-library
+243-->[androidx.window:window:1.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\34c5db0fa856752d05d87c8edbe89192\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+244            android:name="androidx.window.extensions"
+244-->[androidx.window:window:1.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\34c5db0fa856752d05d87c8edbe89192\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+245            android:required="false" />
+245-->[androidx.window:window:1.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\34c5db0fa856752d05d87c8edbe89192\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+246        <uses-library
+246-->[androidx.window:window:1.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\34c5db0fa856752d05d87c8edbe89192\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+247            android:name="androidx.window.sidecar"
+247-->[androidx.window:window:1.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\34c5db0fa856752d05d87c8edbe89192\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+248            android:required="false" />
+248-->[androidx.window:window:1.2.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\34c5db0fa856752d05d87c8edbe89192\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+249
+250        <provider
+250-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\844c74c16c93f9be90ce4bfa84a755bc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+251            android:name="androidx.startup.InitializationProvider"
+251-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\844c74c16c93f9be90ce4bfa84a755bc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+252            android:authorities="com.example.axion.androidx-startup"
+252-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\844c74c16c93f9be90ce4bfa84a755bc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+253            android:exported="false" >
+253-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\844c74c16c93f9be90ce4bfa84a755bc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+254            <meta-data
+254-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\844c74c16c93f9be90ce4bfa84a755bc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+255                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+255-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\844c74c16c93f9be90ce4bfa84a755bc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+256                android:value="androidx.startup" />
+256-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\844c74c16c93f9be90ce4bfa84a755bc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+257            <meta-data
+257-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\5e322a4648632bdeba24be95700b39c9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+258                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+258-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\5e322a4648632bdeba24be95700b39c9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+259                android:value="androidx.startup" />
+259-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\5e322a4648632bdeba24be95700b39c9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+260            <meta-data
+260-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+261                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+261-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+262                android:value="androidx.startup" />
+262-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+263        </provider>
+264
+265        <service
+265-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+266            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+266-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+267            android:enabled="true"
+267-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+268            android:exported="false" >
+268-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+269            <meta-data
+269-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+270                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+270-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+271                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+271-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+272        </service>
+273
+274        <activity
+274-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+275            android:name="androidx.credentials.playservices.HiddenActivity"
+275-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+276            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+276-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+277            android:enabled="true"
+277-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+278            android:exported="false"
+278-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+279            android:fitsSystemWindows="true"
+279-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+280            android:theme="@style/Theme.Hidden" >
+280-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c7c7f50630416e5d92b6ddea40fadc0d\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+281        </activity>
+282        <activity
+282-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:23:9-27:75
+283            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+283-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:24:13-93
+284            android:excludeFromRecents="true"
+284-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:25:13-46
+285            android:exported="false"
+285-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:26:13-37
+286            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+286-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:27:13-72
+287        <!--
+288            Service handling Google Sign-In user revocation. For apps that do not integrate with
+289            Google Sign-In, this service will never be started.
+290        -->
+291        <service
+291-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:33:9-37:51
+292            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+292-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:34:13-89
+293            android:exported="true"
+293-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:35:13-36
+294            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+294-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:36:13-107
+295            android:visibleToInstantApps="true" />
+295-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\54a8cb6501e0abc210fb4299e6464ca9\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:37:13-48
+296
+297        <receiver
+297-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:29:9-40:20
+298            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+298-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:30:13-78
+299            android:exported="true"
+299-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:31:13-36
+300            android:permission="com.google.android.c2dm.permission.SEND" >
+300-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:32:13-73
+301            <intent-filter>
+301-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:30:13-32:29
+302                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+302-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:31:17-81
+302-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:31:25-78
+303            </intent-filter>
+304
+305            <meta-data
+305-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:37:13-39:40
+306                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+306-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:38:17-92
+307                android:value="true" />
+307-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:39:17-37
+308        </receiver>
+309        <!--
+310             FirebaseMessagingService performs security checks at runtime,
+311             but set to not exported to explicitly avoid allowing another app to call it.
+312        -->
+313        <service
+313-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:46:9-53:19
+314            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+314-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:47:13-82
+315            android:directBootAware="true"
+315-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:48:13-43
+316            android:exported="false" >
+316-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8e211e77245c3b4da358241a897aa64f\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:49:13-37
+317            <intent-filter android:priority="-500" >
+317-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:13-23:29
+318                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+318-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:22:17-78
+318-->[:firebase_messaging] D:\axon Program\code\Project\flutter\axion\build\firebase_messaging\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:22:25-75
+319            </intent-filter>
+320        </service>
+321
+322        <activity
+322-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\0c1ba541b3763fef52667e55602f75c2\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
+323            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+323-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\0c1ba541b3763fef52667e55602f75c2\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:19-85
+324            android:exported="false"
+324-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\0c1ba541b3763fef52667e55602f75c2\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:22:19-43
+325            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+325-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\0c1ba541b3763fef52667e55602f75c2\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:21:19-78
+326
+327        <provider
+327-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+328            android:name="com.google.firebase.provider.FirebaseInitProvider"
+328-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+329            android:authorities="com.example.axion.firebaseinitprovider"
+329-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+330            android:directBootAware="true"
+330-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+331            android:exported="false"
+331-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+332            android:initOrder="100" />
+332-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\36b24ca20e298a51b804e5078320b1bc\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+333
+334        <meta-data
+334-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8c43527fc7ffad87ec16ad565eb85653\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+335            android:name="com.google.android.gms.version"
+335-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8c43527fc7ffad87ec16ad565eb85653\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+336            android:value="@integer/google_play_services_version" />
+336-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Axon\.gradle\caches\8.10.2\transforms\8c43527fc7ffad87ec16ad565eb85653\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+337
+338        <receiver
+338-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+339            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+339-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+340            android:directBootAware="false"
+340-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+341            android:enabled="true"
+341-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+342            android:exported="true"
+342-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+343            android:permission="android.permission.DUMP" >
+343-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+344            <intent-filter>
+344-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+345                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+345-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+345-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+346            </intent-filter>
+347            <intent-filter>
+347-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+348                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+348-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+348-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+349            </intent-filter>
+350            <intent-filter>
+350-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+351                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+351-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+351-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+352            </intent-filter>
+353            <intent-filter>
+353-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+354                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+354-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+354-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Axon\.gradle\caches\8.10.2\transforms\97378ccdd2100d7e0cbafd20c33f8550\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+355            </intent-filter>
+356        </receiver>
+357
+358        <service
+358-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\cc7a01ae3668ef3a9f333631fe5e336d\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+359            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+359-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\cc7a01ae3668ef3a9f333631fe5e336d\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+360            android:exported="false" >
+360-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\cc7a01ae3668ef3a9f333631fe5e336d\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
+361            <meta-data
+361-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\cc7a01ae3668ef3a9f333631fe5e336d\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+362                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+362-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\cc7a01ae3668ef3a9f333631fe5e336d\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+363                android:value="cct" />
+363-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\cc7a01ae3668ef3a9f333631fe5e336d\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+364        </service>
+365        <service
+365-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c3e098fc0d82b64b9bd90a4126038db7\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+366            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+366-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c3e098fc0d82b64b9bd90a4126038db7\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+367            android:exported="false"
+367-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c3e098fc0d82b64b9bd90a4126038db7\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+368            android:permission="android.permission.BIND_JOB_SERVICE" >
+368-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c3e098fc0d82b64b9bd90a4126038db7\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+369        </service>
+370
+371        <receiver
+371-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c3e098fc0d82b64b9bd90a4126038db7\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+372            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+372-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c3e098fc0d82b64b9bd90a4126038db7\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+373            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+373-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Axon\.gradle\caches\8.10.2\transforms\c3e098fc0d82b64b9bd90a4126038db7\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+374        <activity
+374-->[com.google.android.play:core-common:2.0.3] C:\Users\Axon\.gradle\caches\8.10.2\transforms\63e337104bea99bc2f7b281c1f98691f\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+375            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+375-->[com.google.android.play:core-common:2.0.3] C:\Users\Axon\.gradle\caches\8.10.2\transforms\63e337104bea99bc2f7b281c1f98691f\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:15:13-93
+376            android:exported="false"
+376-->[com.google.android.play:core-common:2.0.3] C:\Users\Axon\.gradle\caches\8.10.2\transforms\63e337104bea99bc2f7b281c1f98691f\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:16:13-37
+377            android:stateNotNeeded="true"
+377-->[com.google.android.play:core-common:2.0.3] C:\Users\Axon\.gradle\caches\8.10.2\transforms\63e337104bea99bc2f7b281c1f98691f\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:17:13-42
+378            android:theme="@style/Theme.PlayCore.Transparent" />
+378-->[com.google.android.play:core-common:2.0.3] C:\Users\Axon\.gradle\caches\8.10.2\transforms\63e337104bea99bc2f7b281c1f98691f\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:18:13-62
+379    </application>
+380
+381</manifest>

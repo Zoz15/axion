@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">336013400289</string>
+    <string name="google_api_key" translatable="false">AIzaSyDvPazBrHHrW0ZM3b8Vg-gnmTjhofp5gnk</string>
+    <string name="google_app_id" translatable="false">1:336013400289:android:dd34c0a8e2c42e4fa13fa0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDvPazBrHHrW0ZM3b8Vg-gnmTjhofp5gnk</string>
+    <string name="google_storage_bucket" translatable="false">axion-b1d25.firebasestorage.app</string>
+    <string name="project_id" translatable="false">axion-b1d25</string>
+</resources>
