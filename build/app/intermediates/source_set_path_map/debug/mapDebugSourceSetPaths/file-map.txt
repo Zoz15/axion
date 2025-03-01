@@ -72,7 +72,8 @@ com.example.axion.app-debug-70 D:\axon Program\code\Project\flutter\axion\build\
 com.example.axion.app-debug-71 D:\axon Program\code\Project\flutter\axion\build\geolocator_android\intermediates\packaged_res\debug\packageDebugResources
 com.example.axion.app-debug-72 D:\axon Program\code\Project\flutter\axion\build\google_sign_in_android\intermediates\packaged_res\debug\packageDebugResources
 com.example.axion.app-debug-73 D:\axon Program\code\Project\flutter\axion\build\location\intermediates\packaged_res\debug\packageDebugResources
-com.example.axion.app-debug-74 D:\axon Program\code\Project\flutter\axion\build\path_provider_android\intermediates\packaged_res\debug\packageDebugResources
-com.example.axion.app-debug-75 D:\axon Program\code\Project\flutter\axion\build\permission_handler_android\intermediates\packaged_res\debug\packageDebugResources
-com.example.axion.app-debug-76 D:\axon Program\code\Project\flutter\axion\build\shared_preferences_android\intermediates\packaged_res\debug\packageDebugResources
-com.example.axion.app-debug-77 D:\axon Program\code\Project\flutter\axion\build\url_launcher_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.axion.app-debug-74 D:\axon Program\code\Project\flutter\axion\build\package_info_plus\intermediates\packaged_res\debug\packageDebugResources
+com.example.axion.app-debug-75 D:\axon Program\code\Project\flutter\axion\build\path_provider_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.axion.app-debug-76 D:\axon Program\code\Project\flutter\axion\build\permission_handler_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.axion.app-debug-77 D:\axon Program\code\Project\flutter\axion\build\shared_preferences_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.axion.app-debug-78 D:\axon Program\code\Project\flutter\axion\build\url_launcher_android\intermediates\packaged_res\debug\packageDebugResources

@@ -5,21 +5,25 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:axion/features/home_feature/presentation/manger/home_controller.dart';
+import 'package:axion/features/home2_feature/presentation/manger/home_controller.dart';
 import 'package:axion/features/map_feature/presentation/manger/map_controller.dart';
 import 'package:axion/core/constants.dart';
 
 class SaveRouteScreen extends StatefulWidget {
-  final List<LatLng> recordedPoints;
+  final List<List<LatLng>> recordedPoints;
+  final List<Color> roadColors;
+  final List<double> speeds;
   final double totalDistance;
   final String elapsedTime;
-  final double averageSpeed;
+  // final double averageSpeed;
 
-  SaveRouteScreen({
+  const SaveRouteScreen({
+    super.key,
     required this.recordedPoints,
     required this.totalDistance,
     required this.elapsedTime,
-    required this.averageSpeed,
+    required this.roadColors,
+    required this.speeds,
   });
 
   @override
@@ -33,18 +37,7 @@ class _SaveRouteScreenState extends State<SaveRouteScreen> {
   final timestamp = DateTime.now().toIso8601String();
 
   Future<void> _saveRoute() async {
-    if (widget.recordedPoints.length < 10 ||
-        widget.recordedPoints.isEmpty ||
-        widget.averageSpeed < 5) {
-      Get.snackbar(
-        'This is not a valid route',
-        'Please continue your route',
-        snackPosition: SnackPosition.TOP,
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
-      );
-      return;
-    }
+    // print(widget.roadColors);
     if (_nameController.text.trim().isEmpty) {
       Get.snackbar(
         'Error',
@@ -59,15 +52,23 @@ class _SaveRouteScreenState extends State<SaveRouteScreen> {
     final filePath = await _getFilePath();
     final file = File(filePath);
 
+    List<String> roadColorsHex = widget.roadColors.map((color) => '#${color.value.toRadixString(16)}').toList();
+
+
+    // print(widget.roadColors);
+
     final data = {
       'name': _nameController.text,
       'details': _detailsController.text,
       'route': widget.recordedPoints
-          .map((point) => {'lat': point.latitude, 'lng': point.longitude})
+          .map((segment) => segment
+              .map((point) => {'lat': point.latitude, 'lng': point.longitude})
+              .toList())
           .toList(),
+      'routeColors': roadColorsHex,
       'totalDistance': widget.totalDistance,
       'elapsedTime': widget.elapsedTime,
-      'averageSpeed': widget.averageSpeed,
+      'speeds': widget.speeds,
       'timestamp': timestamp,
     };
 
@@ -129,7 +130,7 @@ class _SaveRouteScreenState extends State<SaveRouteScreen> {
                             '${widget.totalDistance.toStringAsFixed(2)} km'),
                         _buildStatItem('Time', widget.elapsedTime),
                         _buildStatItem('Avg Speed',
-                            '${widget.averageSpeed.toStringAsFixed(1)} km/h'),
+                            '${(widget.speeds.reduce((a, b) => a + b) / widget.speeds.length).toStringAsFixed(1)} km/h'),
                       ],
                     ),
                   ),

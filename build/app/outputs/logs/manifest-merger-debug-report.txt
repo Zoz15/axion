@@ -118,6 +118,7 @@ MERGED from [:flutter_foreground_task] D:\axon Program\code\Project\flutter\axio
 MERGED from [:geolocator_android] D:\axon Program\code\Project\flutter\axion\build\geolocator_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-15:12
 MERGED from [:google_sign_in_android] D:\axon Program\code\Project\flutter\axion\build\google_sign_in_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-9:12
 MERGED from [:location] D:\axon Program\code\Project\flutter\axion\build\location\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-18:12
+MERGED from [:package_info_plus] D:\axon Program\code\Project\flutter\axion\build\package_info_plus\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider_android] D:\axon Program\code\Project\flutter\axion\build\path_provider_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:permission_handler_android] D:\axon Program\code\Project\flutter\axion\build\permission_handler_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences_android] D:\axon Program\code\Project\flutter\axion\build\shared_preferences_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
@@ -329,6 +330,8 @@ MERGED from [:google_sign_in_android] D:\axon Program\code\Project\flutter\axion
 MERGED from [:google_sign_in_android] D:\axon Program\code\Project\flutter\axion\build\google_sign_in_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:location] D:\axon Program\code\Project\flutter\axion\build\location\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:location] D:\axon Program\code\Project\flutter\axion\build\location\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:package_info_plus] D:\axon Program\code\Project\flutter\axion\build\package_info_plus\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:package_info_plus] D:\axon Program\code\Project\flutter\axion\build\package_info_plus\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_android] D:\axon Program\code\Project\flutter\axion\build\path_provider_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_android] D:\axon Program\code\Project\flutter\axion\build\path_provider_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:permission_handler_android] D:\axon Program\code\Project\flutter\axion\build\permission_handler_android\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44

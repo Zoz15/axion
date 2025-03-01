@@ -11,11 +11,10 @@ Future<void> loginEmailPassword({
   try {
     final credential = await FirebaseAuth.instance
         .signInWithEmailAndPassword(email: email, password: password);
-    if(FirebaseAuth.instance.currentUser!.emailVerified){
+    if (FirebaseAuth.instance.currentUser!.emailVerified) {
       Get.offAllNamed('/home');
-    }else{
-      
-    Get.offAllNamed('/verification');
+    } else {
+      Get.offAllNamed('/verification');
     }
   } on FirebaseAuthException catch (e) {
     print('-----------------------------');
@@ -28,7 +27,7 @@ Future<void> loginEmailPassword({
       Get.snackbar('Error', 'Incorrect Password.');
     } else if (e.code == 'invalid-credential') {
       print('Email not found');
-      Get.snackbar('Error', 'Email not found');
+      Get.snackbar('Error', 'Wong email or password');
     }
   }
 }

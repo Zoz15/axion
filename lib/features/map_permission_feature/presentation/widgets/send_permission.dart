@@ -1,4 +1,3 @@
-
 import 'package:disable_battery_optimization/disable_battery_optimization.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
