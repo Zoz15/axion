@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>336013400289-ahlu0thm0c0c4i0tj6e5cb97ge7t9p76.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.336013400289-ahlu0thm0c0c4i0tj6e5cb97ge7t9p76</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>336013400289-42qivcu6b5m1jr84vnn4gs95a3akj2u0.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBqq_X6UaoPTlYXSO33vdbHqtSesY5h46k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>336013400289</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.axion</string>
+	<key>PROJECT_ID</key>
+	<string>axion-b1d25</string>
+	<key>STORAGE_BUCKET</key>
+	<string>axion-b1d25.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:336013400289:ios:a4647a1f17838a2fa13fa0</string>
+</dict>
+</plist>

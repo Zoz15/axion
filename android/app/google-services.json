@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "336013400289",
+    "project_id": "axion-b1d25",
+    "storage_bucket": "axion-b1d25.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336013400289:android:dd34c0a8e2c42e4fa13fa0",
+        "android_client_info": {
+          "package_name": "com.example.axion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvPazBrHHrW0ZM3b8Vg-gnmTjhofp5gnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
